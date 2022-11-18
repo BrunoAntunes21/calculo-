@@ -13,32 +13,48 @@
         numero2 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine("insira a operação desejada +|-|X ou *|/");
         op = Console.ReadLine();
-        if (op == "+")
+        switch (op)
         {
-            numero3 = (numero1 + numero2);
-            Console.WriteLine("A soma dos dois valores é igual a: " + numero3, 2f);
+            case "+" :
+                
+                    numero3 = (numero1 + numero2);
+                    Console.WriteLine("A soma dos dois valores é igual a: " + numero3, 2f);
+            break;
+            case "-":
+
+                numero3 = (numero1 - numero2);
+                Console.WriteLine("A subtração dos dois valores é igual a: " + numero3, 2f);
+                break;
+            case "*":
+
+                numero3 = (numero1 * numero2);
+                Console.WriteLine("A multiplicação dos dois valores é igual a: " + numero3, 2f);
+                break;
+            case "X":
+
+                numero3 = (numero1 * numero2);
+                Console.WriteLine("A multiplicação dos dois valores é igual a: " + numero3, 2f);
+                break;
+
+            case "/":
+
+                numero3 = (numero1 / numero2);
+                Console.WriteLine("A divisão dos dois valores é igual a: " + numero3, 2f);
+                break;
+            case "%":
+
+                numero3 = (numero1 % numero2);
+                Console.WriteLine("A divisão dos dois valores é igual a: " + numero3, 2f);
+                break;
+
+
+            default:
+                Console.WriteLine("Desculpe não foi possivel executar a operação desejada ");
+                break;
+
+
         }
-        else if (op == "-")
-        {
-            numero3 = (numero1 - numero2);
-            Console.WriteLine("A subtração dos dois valores é igual a: " + numero3, 2f);
-        }
-        else if (op == "x" || op == "*")
-        {
-            numero3 = (numero1 * numero2);
-            Console.WriteLine("A multiplucação dos dois valores é igual a: " + numero3, 2f);
-        }
-        else if (op == "/" || op == "%")
-        {
-            numero3 = (numero1 / numero2);
-            Console.WriteLine("A divisão dos dois valores é igual a: " + numero3, 2f);
-        }
-        else if (op == "%")
-        {
-            numero3 = (numero1 % numero2);
-            Console.WriteLine("A divisão dos dois valores é igual a: " + numero3, 2f);
-        }
-       
+
         Console.ReadKey();
     }
 }
